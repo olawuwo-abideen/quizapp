@@ -20,7 +20,7 @@ async function welcome() {
   console.log(`
     Hello!
     Welcome to Nodejs Quiz
-    If you get any question wrong you will be force to ${chalk.bgRed('QUIT')}
+    If you get any question wrong you ${chalk.bgRed('LOSE!!')}
     So get all the questions right...
     All the Best!!!
 
@@ -51,8 +51,7 @@ async function askName() {
 
   playerName = answers.player_name;
 }
-"\n"
-"\n"
+
 function winner() {
   console.clear();
   figlet(`Congrats , ${playerName} !\n You have won the sum of $ 10 , 0 0 0 , 0 0 0`, (err, data) => {
