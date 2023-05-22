@@ -111,6 +111,42 @@ async function question3() {
     return handleAnswer(answers.question_3 === "console.log('type : ' + os.type());");
   }
 
+
+
+
+
+  async function question4() {
+    const answers = await inquirer.prompt({
+      name: 'question_4',
+      type: 'list',
+      message: 'What is Callback?\n',
+      choices: [  "Callback is an asynchronous equivalent for a function.", 
+                  "None of the above.", 
+                  "Callback is a technique in which a method call back the caller method.", 
+                  "Both of the above."
+                  ],
+    });
+    return handleAnswer(answers.question_4 === "Callback is an asynchronous equivalent for a function.");
+  }
+
+  async function question5() {
+    const answers = await inquirer.prompt({
+      name: 'question_5',
+      type: 'list',
+      message: '  Node js is a single threaded application but supports concurrency.\n',
+      choices: [  "true.", 
+                  "None of the above.", 
+                  "false.", 
+                  "Both of the above."
+                  ],
+    });
+    return handleAnswer(answers.question_5 === "true.");
+  }
+
+ 
+
+
+
 // Run it with top-level await
 console.clear();
 await welcome();
@@ -118,5 +154,6 @@ await askName();
 await question1();
 await question2();
 await question3();
-
+await question4();
+await question5();
 winner();
