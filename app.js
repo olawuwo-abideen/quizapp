@@ -51,7 +51,8 @@ async function askName() {
 
   playerName = answers.player_name;
 }
-
+"\n"
+"\n"
 function winner() {
   console.clear();
   figlet(`Congrats , ${playerName} !\n You have won the sum of $ 10 , 0 0 0 , 0 0 0`, (err, data) => {
@@ -82,6 +83,8 @@ async function question1() {
 
   return handleAnswer(answers.question_1 === "Being built on Google Chrome's V8 JavaScript Engine");
 }
+
+
 
 async function question2() {
   const answers = await inquirer.prompt({
