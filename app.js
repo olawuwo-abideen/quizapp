@@ -187,8 +187,25 @@ async function question3() {
   }
 
   
-  
- 
+  async function question9() {
+    const answers = await inquirer.prompt({
+      name: 'question_9',
+      type: 'list',
+      message: ` 
+                Which of the following statements are true?
+      
+                1. NodeJS is multithreaded.
+                2. The Buffer class is a global class that can be accessed without importing a buffer module.`,
+      choices: [  "Both are True", 
+                  "Both are False", 
+                  "Statement 1 is True and Statement 2 is False", 
+                  "Statement 2 is True and Statement 1 is False"
+                  ],
+    });
+    return handleAnswer(answers.question_9 === "Statement 1 is True and Statement 2 is False");
+  }
+
+
 
 
 
@@ -204,4 +221,6 @@ await question5();
 await question6();
 await question7();
 await question8();
+await question9();
+await question10();
 winner();
