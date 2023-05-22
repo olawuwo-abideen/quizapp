@@ -112,9 +112,6 @@ async function question3() {
   }
 
 
-
-
-
   async function question4() {
     const answers = await inquirer.prompt({
       name: 'question_4',
@@ -128,6 +125,7 @@ async function question3() {
     });
     return handleAnswer(answers.question_4 === "Callback is an asynchronous equivalent for a function.");
   }
+
 
   async function question5() {
     const answers = await inquirer.prompt({
@@ -143,6 +141,53 @@ async function question3() {
     return handleAnswer(answers.question_5 === "true.");
   }
 
+
+  async function question6() {
+    const answers = await inquirer.prompt({
+      name: 'question_6',
+      type: 'list',
+      message: '  What is the full form of npm? \n',
+      choices: [  "Node Project Manager", 
+                  "New Project Manager", 
+                  "New Package Manager", 
+                  "Node Package Manager"
+                  ],
+    });
+    return handleAnswer(answers.question_6 === "Node Package Manager");
+  }
+ 
+  
+  async function question7() {
+    const answers = await inquirer.prompt({
+      name: 'question_7',
+      type: 'list',
+      message: '  _____ is an interactive shell that processes Node. \n',
+      choices: [  "REPL", 
+                  "REAL", 
+                  "RESP", 
+                  "None of the Above"
+                  ],
+    });
+    return handleAnswer(answers.question_7 === "REPL");
+  }
+  
+
+  async function question8() {
+    const answers = await inquirer.prompt({
+      name: 'question_8',
+      type: 'list',
+      message: '  How can we expose node modules? \n',
+      choices: [  "expose", 
+                  "exports", 
+                  "requires", 
+                  "None of the Above"
+                  ],
+    });
+    return handleAnswer(answers.question_8 === "exports");
+  }
+
+  
+  
  
 
 
@@ -156,4 +201,7 @@ await question2();
 await question3();
 await question4();
 await question5();
+await question6();
+await question7();
+await question8();
 winner();
