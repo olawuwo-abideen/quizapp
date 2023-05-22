@@ -205,6 +205,19 @@ async function question3() {
     return handleAnswer(answers.question_9 === "Statement 1 is True and Statement 2 is False");
   }
 
+  async function question10() {
+    const answers = await inquirer.prompt({
+      name: 'question_10',
+      type: 'list',
+      message: 'When does a stream fire a data event?' ,
+      choices: [  "When there is Data to Read", 
+                  "When there is Data to Write", 
+                  "Where there is no Data available", 
+                  "Node of the Above"
+                  ],
+    });
+    return handleAnswer(answers.question_10 === "When there is Data to Write");
+  }
 
 
 
