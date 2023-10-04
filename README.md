@@ -1,6 +1,6 @@
 # Quizapp
 
-A Quizapp 
+A Quizapp where player can choose from available choices. Once the player completed the quiz the app typically display the price 
 
 
 ## Built With:
